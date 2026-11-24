@@ -6,7 +6,7 @@ Fokus handbook ini bukan sekadar menghafal sintaksis pustaka atau framework tert
 
 ***
 
-## Peta Kurikulum Arsitektur (10 Kategori - 82 Topik)
+## Peta Kurikulum Arsitektur (11 Kategori - 84 Topik)
 
 ```
 +-------------------------------------------------------------------------+
@@ -87,6 +87,12 @@ Fokus handbook ini bukan sekadar menghafal sintaksis pustaka atau framework tert
 | micro-frontend-architecture/ (Arsitektur Terdistribusi & Modul Federasi)|
 | 77. Module Fed Internals 78. Cross-MFE Comm      79. MFE Routing        |
 | 80. CSS/Asset Isolation  81. MFE Resilience      82. Dynamic Remotes    |
++-------------------------------------------------------------------------+
+                                    |
+                                    v
++-------------------------------------------------------------------------+
+| advanced-frontend-patterns/ (Pola Arsitektur Frontier & Offline-First)  |
+| 83. Progressive Web Apps (PWA) 84. Backend-for-Frontend (BFF)           |
 +-------------------------------------------------------------------------+
 ```
 
@@ -225,6 +231,13 @@ Arsitektur sistem web terdistribusi, federasi modul runtime, isolasi styling, da
 * [80. CSS and Asset Isolation](micro-frontend-architecture/css-and-asset-isolation/README.md) - Proteksi benturan styling CSS global (Tailwind reset vs Bootstrap) via PostCSS prefixing, Shadow DOM, dan resolusi publicPath aset.
 * [81. MFE Resilience and Fallbacks](micro-frontend-architecture/mfe-resilience-and-fallbacks/README.md) - Isolasi dampak kerusakan (blast radius containment) dan circuit breaker saat container remote mengalami timeout atau HTTP 504.
 * [82. Dynamic Remotes Management](micro-frontend-architecture/dynamic-remotes-management/README.md) - Service discovery frontend via Manifest API runtime untuk arsitektur multi-environment, canary rollout, dan rollback instan.
+
+### 11. Advanced Frontend Patterns
+
+Pola arsitektur tingkat lanjut untuk ketahanan aplikasi offline-first dan integrasi orkestrasi backend yang berorientasi pada antarmuka pengguna:
+
+* [83. Progressive Web Apps (PWA)](advanced-frontend-patterns/progressive-web-apps/README.md) - Arsitektur web offline-first memanfaatkan Service Worker, strategi CacheStorage, App Shell, dan instalabilitas beranda native.
+* [84. Backend-for-Frontend (BFF)](advanced-frontend-patterns/backend-for-frontend/README.md) - Layer orkestrasi API yang dimiliki tim frontend untuk agregasi microservices, pemangkasan payload, proteksi token otentikasi, dan normalisasi error.
 
 ***
 
