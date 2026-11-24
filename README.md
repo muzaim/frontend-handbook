@@ -1,12 +1,12 @@
 # Frontend Engineering Handbook
 
-Handbook ini dirancang sebagai panduan komprehensif, praktis, dan ramah bagi developer pemula (junior developer) untuk memahami konsep inti rekayasa frontend modern, mekanisme internal browser, arsitektur rendering web, manajemen state, optimasi performa, integrasi jaringan, keamanan klien, pengujian kualitas kode, infrastruktur tooling modern, serta ketahanan arsitektur aplikasi web berskala produksi.
+Handbook ini dirancang sebagai panduan komprehensif, praktis, dan ramah bagi developer pemula (junior developer) untuk memahami konsep inti rekayasa frontend modern, mekanisme internal browser, arsitektur rendering web, manajemen state, optimasi performa, integrasi jaringan, keamanan klien, pengujian kualitas kode, infrastruktur tooling modern, ketahanan arsitektur, serta perancangan sistem Micro Frontends berskala enterprise.
 
-Fokus handbook ini bukan sekadar menghafal sintaksis pustaka atau framework tertentu, melainkan membedah prinsip dasar: bagaimana runtime JavaScript mengeksekusi kode, bagaimana peramban mengonversi HTML dan CSS menjadi piksel di layar, bagaimana strategi rendering dipilih berdasarkan kebutuhan performa, bagaimana aliran data dikelola secara efisien, bagaimana mengamankan aplikasi dari kerentanan web modern, serta bagaimana menguji dan merilis aplikasi secara andal.
+Fokus handbook ini bukan sekadar menghafal sintaksis pustaka atau framework tertentu, melainkan membedah prinsip dasar: bagaimana runtime JavaScript mengeksekusi kode, bagaimana peramban mengonversi HTML dan CSS menjadi piksel di layar, bagaimana strategi rendering dipilih berdasarkan kebutuhan performa, bagaimana aliran data dikelola secara efisien, bagaimana mengamankan aplikasi dari kerentanan web modern, bagaimana menguji dan merilis aplikasi secara andal, serta bagaimana memecah aplikasi monolitik raksasa menjadi aplikasi mikro yang otonom.
 
 ***
 
-## Peta Kurikulum Arsitektur (9 Kategori - 76 Topik)
+## Peta Kurikulum Arsitektur (10 Kategori - 82 Topik)
 
 ```
 +-------------------------------------------------------------------------+
@@ -80,6 +80,13 @@ Fokus handbook ini bukan sekadar menghafal sintaksis pustaka atau framework tert
 | advanced-resilience-and-design/ (Ketahanan Sistem & Skalabilitas UI)    |
 | 72. Memory Leaks         73. Error Boundaries    74. Frontend Monitoring|
 | 75. Design Systems       76. Feature Flags                              |
++-------------------------------------------------------------------------+
+                                    |
+                                    v
++-------------------------------------------------------------------------+
+| micro-frontend-architecture/ (Arsitektur Terdistribusi & Modul Federasi)|
+| 77. Module Fed Internals 78. Cross-MFE Comm      79. MFE Routing        |
+| 80. CSS/Asset Isolation  81. MFE Resilience      82. Dynamic Remotes    |
 +-------------------------------------------------------------------------+
 ```
 
@@ -207,6 +214,17 @@ Strategi ketahanan sistem aplikasi web, isolasi kesalahan, pemantauan produksi, 
 * [74. Frontend Monitoring & Error Tracking](advanced-resilience-and-design/monitoring-and-error-tracking/README.md) - Real User Monitoring (RUM) via Sentry untuk menangkap crash, breadcrumbs, dan session replay dengan source maps aman.
 * [75. Design Systems](advanced-resilience-and-design/design-systems/README.md) - Fondasi skalabilitas antarmuka melalui Design Tokens, pustaka komponen headless aksesibel, dan dokumentasi Storybook.
 * [76. Feature Flags](advanced-resilience-and-design/feature-flags/README.md) - Pemisahan proses deployment dari release bisnis, mendukung Trunk-Based Development, rollout bertahap, dan kill switch instan.
+
+### 10. Micro Frontend Architecture
+
+Arsitektur sistem web terdistribusi, federasi modul runtime, isolasi styling, dan koordinasi container:
+
+* [77. Module Federation Internals](micro-frontend-architecture/module-federation-internals/README.md) - Mekanisme internal shared scope runtime, negosiasi versi semantik, dan resolusi singleton dependency di browser.
+* [78. Cross-MFE Communication](micro-frontend-architecture/cross-mfe-communication/README.md) - Pola pertukaran data terdekupel antar sub-aplikasi menggunakan native DOM CustomEvents dan URL state tanpa shared global store.
+* [79. Micro-Frontend Routing](micro-frontend-architecture/micro-frontend-routing/README.md) - Penyelarasan navigasi riwayat browser antara BrowserRouter Host dan MemoryRouter Sub-App dengan dukungan deep linking.
+* [80. CSS and Asset Isolation](micro-frontend-architecture/css-and-asset-isolation/README.md) - Proteksi benturan styling CSS global (Tailwind reset vs Bootstrap) via PostCSS prefixing, Shadow DOM, dan resolusi publicPath aset.
+* [81. MFE Resilience and Fallbacks](micro-frontend-architecture/mfe-resilience-and-fallbacks/README.md) - Isolasi dampak kerusakan (blast radius containment) dan circuit breaker saat container remote mengalami timeout atau HTTP 504.
+* [82. Dynamic Remotes Management](micro-frontend-architecture/dynamic-remotes-management/README.md) - Service discovery frontend via Manifest API runtime untuk arsitektur multi-environment, canary rollout, dan rollback instan.
 
 ***
 
