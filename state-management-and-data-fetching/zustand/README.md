@@ -116,7 +116,7 @@ export function PlayerBar() {
     <footer className="player-bar">
       <span>Sedang Memutar: {currentTrack || "Tidak ada lagu"}</span>
       <button onClick={togglePlay}>
-        {isPlaying ? "⏸ Jeda" : "▶ Putar"}
+        {isPlaying ? "[Jeda]" : "[Putar]"}
       </button>
     </footer>
   );

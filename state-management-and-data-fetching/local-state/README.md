@@ -95,7 +95,7 @@ export const TransactionRow: React.FC<{ transaction: Transaction }> = ({ transac
       >
         <span className="font-semibold">{transaction.merchant}</span>
         <span>Rp {transaction.amount.toLocaleString()}</span>
-        <span>{isOpen ? "▲ Tutup" : "▼ Rincian"}</span>
+        <span>{isOpen ? "[-] Tutup" : "[+] Rincian"}</span>
       </div>
 
       {/* Rincian hanya muncul jika isOpen true */}
